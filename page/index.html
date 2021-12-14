@@ -10,7 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Readex+Pro:wght@200&display=swap" rel="stylesheet">
     <link  href="../public/style.css" rel="stylesheet">
 </head>
-<body>
+<body >
+  <div class="hidden md:visible">
     <div class="adv w-full min-w-screen h-16 bg-pandapink flex justify-center items-center">
       <div class="adv-banner flex items-center gap-7">
 
@@ -31,10 +32,10 @@
         
       </div>
     </div>
-
+</div>
     <!-- start of header  -->
 
-    <div class="header py-2 px-4 flex justify-between">
+    <div class="header py-2 px-4 flex justify-between items-center">
         <div class="logo flex space-x-6">
           <svg version="1.1"  class="w-8 fill-pandapink" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 198.2 200.3" xml:space="preserve">
 
@@ -91,29 +92,35 @@
 
     <!-- start of banner  -->
     <div class="banner-container overflow-hidden relative ">
-        <div class="label-container flex  sdfgdfg justify-center  items-center h-screen px-3 py-1 max-h-screen  ">
-          <div class="">
-            <p class="text-4xl font-thin tracking-wide">It's the food and groceries you love, delivered</p>
-            <div class="form w-auto  rounded-sm flex space-x-3 bg-slate-50 shadow-md my-2 mx-1">
-              <input class="w-96 rounded-sm h-14 border border-1 "/>
-               <div class="btn-group flex space-x-3">
-              <button class="uppercase h-full w-36 bg-pink-600 flex justify-center items-center text-white font-open" >Delivery</button>
-              <button class="uppercase h-full  flex justify-center items-center  font-open" >or</button>
-              <button class="uppercase h-full w-36 bg-pink-600 flex justify-center items-center text-white font-open" >Delivery</button>
+        <div class="label-container flex flex-row    items-center h-[650px] px-3 py-1 max-h-screen ">
+          <div class=" sm:p-2 md:p-20 z-30">
+            <p class="w-44 md:w-auto text-2xl md:text-5xl font-thin  tracking-wide my-10 ">It's the food and groceries you love, delivered</p>
+            <div class="form w-100  py-4 sm:px-2 rounded-sm flex-column md:flex space-y-2 md:space-y-0 gap-3 bg-slate-50 shadow-md my-20 mx-1">
+              <input class="w-full rounded-sm h-14 border p-2 border-1 md:basis-3/4" placeholder="Your street and street number"/>
+               <div class="btn-group flex justify-center md:justify-start  space-x-3 basis-1/4">
+                  <button class="uppercase w-36 h-14 bg-pink-600 flex justify-center items-center text-white font-open" >Delivery</button>
+                  <button class="uppercase h-14  flex justify-center items-center  font-open" >or</button>
+                  <button class="uppercase h-14 w-36 bg-pink-600 flex justify-center items-center text-white font-open" >Pick up</button>
             </div>
             </div>
            
           </div>
         </div>
-        <!-- <div class="banner-img absolute top-0 -right-[35%] ">
+        
+    </div>
+
+    <div class="banner-img absolute top-20 -right-[120%] md:-right-[35%] z-10 ">
           <img 
            
             src="https://images.deliveryhero.io/image/foodpanda/hero-home-mm.jpg?width=2000&height=1280|https://images.deliveryhero.io/image/foodpanda/hero-home-mm.jpg?width=4000&height=2560" 
-             width="900"
-          
+            class="w-[700px] md:w-[900px] z-10"
+           
             alt="">
-        </div> -->
-    </div>
-    <!-- start of banner  -->
+        </div> 
+    <!-- start of banner 
+
+    <!-- //!start of partners section  -->
+
+    <!-- //!end of partners section  -->
 </body>
 </html>
