@@ -904,6 +904,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -1252,6 +1256,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
+  .sm\:-right-\[120\%\] {
+    right: -120%;
+  }
+
+  .sm\:-right-\[20\%\] {
+    right: -20%;
+  }
+
+  .sm\:-right-\[40\%\] {
+    right: -40%;
+  }
+
+  .sm\:-right-\[60\%\] {
+    right: -60%;
+  }
+
   .sm\:p-2 {
     padding: 0.5rem;
   }
@@ -1273,6 +1293,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:-right-\[80\%\] {
     right: -80%;
+  }
+
+  .md\:-right-\[85\%\] {
+    right: -85%;
   }
 
   .md\:flex {
@@ -1309,8 +1333,65 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding: 5rem;
   }
 
+  .md\:p-10 {
+    padding: 2.5rem;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:-right-\[35\%\] {
+    right: -35%;
+  }
+
+  .lg\:-right-\[55\%\] {
+    right: -55%;
+  }
+
+  .lg\:-right-\[85\%\] {
+    right: -85%;
+  }
+
+  .lg\:-right-\[45\%\] {
+    right: -45%;
+  }
+
+  .lg\:w-auto {
+    width: auto;
+  }
+
+  .lg\:w-44 {
+    width: 11rem;
+  }
+
+  .lg\:p-20 {
+    padding: 5rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:-right-\[55\%\] {
+    right: -55%;
+  }
+
+  .xl\:-right-\[15\%\] {
+    right: -15%;
+  }
+
+  .xl\:-right-\[25\%\] {
+    right: -25%;
+  }
+
+  .xl\:justify-start {
+    justify-content: flex-start;
   }
 }
