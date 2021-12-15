@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Readex+Pro:wght@200&display=swap" rel="stylesheet">
     <link  href="../public/style.css" rel="stylesheet">
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 <body >
   <div class="hidden md:visible">
@@ -120,7 +122,66 @@
     <!-- start of banner 
 
     <!-- //!start of partners section  -->
+          <div class="partner-title   mx-16 relative  ">
+            <h1 class="p-0 m-0 text-9xl font-bold text-gray-100">Partners</h1>
+            <h3 class="p-0 absolute bottom-4 text-2xl font-open font-thin tracking-wide text-gray-600">You prepare the food, we handle the rest</h3>
+          </div>
 
+          <!-- //poster section  -->
+          <div class="poster-section h-[80vh]">
+            <div class="h-1/2  bg-[url('https://images.deliveryhero.io/image/foodpanda/home-vendor-mm.jpg?width=1200&height=768|https://images.deliveryhero.io/image/foodpanda/home-vendor-mm.jpg?width=2400&height=1536')]">
+              <div class="card-container ml-12 h-full flex place-items-end relative">
+                <div class="absolute top-20  card rounded-md  p-10 bg-white w-[600px] shadow-md shadow-slate-200">
+                      <p class="text-lg  font-open tracking-wide font-thin">List your restaurant or shop on foodpanda</p>
+                      <p class="my-4 text-gray-400 text-md font-thin">
+                        Would you like millions of new customers to enjoy your amazing food and groceries? So would we!
+                      </p>
+                      <p class="my-4 text-gray-400 text-md font-thin">
+                        It's simple: we list your menu and product lists online, help you process orders, pick them up, hungry pandas - in a heartbeat!
+                      </p>
+                      <p class="my-4 text-gray-400 text-md font-thin">
+                        and deliver them to hungry pandas – in a heartbeat!
+                      </p>
+                      <div class="w-full flex justify-around">
+                        <button class="w-48 h-12 ml-auto my-4 uppercase text-white text-md  text-sm   bg-pandapink ">
+                            get started
+                        </button>
+                      </div>
+                      
+                    </div>
+              </div>
+  
+            </div>
+          </div>
+          <!-- //poster section  -->
+          <div class="partner-title   mx-16 relative  ">
+            <h1 class="p-0 m-0 text-9xl font-bold text-gray-100">Cities</h1>
+            <h3 class="p-0 absolute bottom-4 text-2xl font-open font-thin tracking-wide text-gray-600">CitiesFind us in these cities and many more!</h3>
+          </div>
+
+
+          <div class="gallery grid grid-cols-5 mx-20 gap-8"
+              x-init
+               x-data="
+                    {
+                     
+                      items: new Array(10)
+                    }
+                "
+               
+                >
+                <template x-for="(item,index) in items" :key="index">
+                  <div class="card bg-blue-200 aspect-3/4" >
+                  
+                        
+                  </div>
+                </template>
+
+              
+           
+            
+           
+          </div>
     <!-- //!end of partners section  -->
 </body>
 </html>
