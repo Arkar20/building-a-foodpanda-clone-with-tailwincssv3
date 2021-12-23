@@ -452,16 +452,56 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: -100%;
 }
 
-.bottom-4 {
-  bottom: 1rem;
-}
-
-.top-60 {
-  top: 15rem;
+.bottom-8 {
+  bottom: 2rem;
 }
 
 .top-20 {
   top: 5rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.-top-10 {
+  top: -2.5rem;
+}
+
+.-top-20 {
+  top: -5rem;
+}
+
+.-bottom-20 {
+  bottom: -5rem;
+}
+
+.-bottom-10 {
+  bottom: -2.5rem;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.-top-24 {
+  top: -6rem;
+}
+
+.bottom-2 {
+  bottom: 0.5rem;
 }
 
 .z-30 {
@@ -506,12 +546,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .ml-12 {
   margin-left: 3rem;
 }
 
 .ml-auto {
   margin-left: auto;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .inline {
@@ -566,6 +624,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 3rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-60 {
+  height: 15rem;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
 .max-h-screen {
   max-height: 100vh;
 }
@@ -606,6 +684,38 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 12rem;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-52 {
+  width: 13rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .basis-1\/4 {
   flex-basis: 25%;
 }
@@ -620,6 +730,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .place-items-end {
@@ -654,6 +768,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 2rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -676,6 +794,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-hidden {
@@ -728,6 +858,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('https://images.deliveryhero.io/image/foodpanda/home-vendor-mm.jpg?width=1200&height=768|https://images.deliveryhero.io/image/foodpanda/home-vendor-mm.jpg?width=2400&height=1536');
 }
 
+.bg-\[url\(\'https\:\/\/images\.deliveryhero\.io\/image\/fd-mm\/city-title\/city-tile-Yangon\.jpg\?width\=400\&height\=400\'\)\] {
+  background-image: url('https://images.deliveryhero.io/image/fd-mm/city-title/city-tile-Yangon.jpg?width=400&height=400');
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
 .fill-white {
   fill: #fff;
 }
@@ -778,6 +920,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .font-open {
   font-family: Open Sans;
 }
@@ -814,6 +968,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
+.font-light {
+  font-weight: 300;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -847,26 +1005,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-emerald-300 {
-  --tw-shadow-color: #6ee7b7;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
 .shadow-slate-200 {
   --tw-shadow-color: #e2e8f0;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.group:hover .group-hover\:block {
+  display: block;
 }
 
 @media (min-width: 640px) {
