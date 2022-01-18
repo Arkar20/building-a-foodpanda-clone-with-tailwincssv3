@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peer Function in V3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Readex+Pro:wght@200&display=swap" rel="stylesheet">
+    <link  href="../../public/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <main class="flex min-h-screen items-center justify-center ">
+    <div class="border border-2 shadow-md p-10">
+      <h3 class="text-xl font-semibold">Are You Sure? You Want To Delete?</h3>
+      <div class="mt-4 flex justify-center space-x-7 ">
+        <div class="cursor-pointer relative">
+          <input type='radio' name="answer" class="absolute top-0 h-14 w-14 opacity-0 inset-x-0 z-10 peer" />
+          <button class="border h-14 w-14 shadow-md peer-checked:border-red-300">
+              Yes
+          </button>
+        </div>
+
+        <div class="cursor-pointer relative">
+          <input type='radio' name="answer" class="absolute top-0 h-14 w-14 opacity-0 inset-x-0 z-10 peer" />
+          <button class="border h-14 w-14 shadow-md peer-checked:border-green-300">
+              No
+          </button>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+  
+</body>
+</html>
