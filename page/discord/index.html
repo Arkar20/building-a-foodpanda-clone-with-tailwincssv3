@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../public/style.css">
 </head>
 <body>
-    <main class="flex flex-col text-gray-500 overflow-hidden min-h-screen">
+    <main class="flex flex-col text-gray-500 overflow-hidden max-h-screen h-screen">
         <section class="flex justify-between shadow-lg shadow-gray-900 text-gray-200 bg-gray-800">
            <div class="w-56 p-3 flex justify-between">
                 <h2>TailWind Css</h2>
@@ -60,8 +60,10 @@
         
 
         </section>
-        <section class="flex-grow flex bg-red-700">
-            <div class="w-56 py-3 px-2 bg-gray-800">
+        <section class="flex-grow flex bg-red-700 overflow-y-hidden">
+            <div class="flex-none w-56 py-3  bg-gray-800 flex flex-col">
+                <div class="flex-grow overflow-y-auto mx-2">
+            
                 <nav class="mt-5  text-gray-400 uppercase text-sm mb-10">
                     <div class="flex justify-between">
                         <h2>General</h2>
@@ -128,95 +130,52 @@
                         </li>
                     </ul>
                 </nav>
+                </div>
+                <div class=" bg-white">
+                    Button
+                </div>
+            
             </div>
-            <div class="flex-grow p-3 bg-purple-400">
-                <h2>message section</h2>
+            <div class="flex-grow flex flex-col overflow-hidden bg-gray-700">
+                
+                <div class="flex-grow overflow-y-auto mx-2">
+                    <div class="w-full bg-purple-500 rounded-md">
+                        <h1 class="text-white text-sm p-2">41 Messages since 2022.</h1>
+                    </div>
+                    <p>
+                        Fugiat est ad fugiat sint duis occaecat velit duis eiusmod incididunt consectetur id ea. Officia tempor est voluptate anim dolor et quis. Duis elit culpa dolore aliquip eiusmod velit do duis incididunt consequat non ad.
+
+Incididunt laboris minim ad dolore Lorem qui culpa cillum velit deserunt qui. Pariatur sit ea qui qui proident sit. Id irure ea elit fugiat. Commodo incididunt in magna esse incididunt aliqua quis deserunt consequat exercitation Lorem.
+
+Deserunt laboris reprehenderit consequat voluptate dolor. Est magna tempor consectetur fugiat eu tempor nostrud officia enim nulla minim adipisicing. Est officia aute aliquip laboris commodo. Eu voluptate cillum adipisicing veniam nulla est voluptate proident. Nisi occaecat sit exercitation laboris est culpa fugiat et est voluptate. Dolor duis sunt commodo aute non proident magna nostrud cupidatat occaecat cupidatat consectetur. Voluptate deserunt duis Lorem occaecat amet exercitation labore do in incididunt ullamco consequat.
+
+Labore magna sunt labore aliquip ad esse qui. Ad nostrud et voluptate laborum consequat minim ea laboris id ullamco reprehenderit. Sint incididunt fugiat anim veniam laboris veniam excepteur dolore sit fugiat eiusmod sit ut. Sit id ut laboris excepteur nisi non exercitation consequat laboris adipisicing qui occaecat. Et nostrud mollit consectetur fugiat.
+
+Veniam nulla est et pariatur. Aliqua dolore aliquip eu non. Sit do ea qui labore eu et consectetur incididunt. Qui deserunt amet magna velit aute veniam sit reprehenderit tempor proident officia irure reprehenderit. Dolor nisi eu elit occaecat mollit commodo id.
+
+Deserunt ea ex id excepteur id pariatur culpa ipsum do ex exercitation cupidatat quis irure. Nisi cillum eu occaecat nisi minim dolor enim fugiat magna eu duis tempor. Pariatur et et consectetur pariatur nisi eiusmod ut veniam est. Eu esse fugiat nisi tempor deserunt incididunt dolor sit Lorem id sint. Minim amet ipsum ea dolor incididunt aliquip Lorem consectetur. Minim minim esse proident incididunt incididunt exercitation elit reprehenderit aliquip laborum magna exercitation.
+
+Ea laborum do elit quis esse exercitation. Exercitation culpa consequat consectetur reprehenderit minim sit ut est. Laborum et sunt occaecat ad veniam occaecat in occaecat nisi. Incididunt deserunt ad proident aliquip ut proident est labore irure est non dolor. Elit adipisicing ipsum consectetur tempor quis consectetur aliqua occaecat esse consequat occaecat nulla. Officia veniam Lorem duis excepteur.
+
+Nulla deserunt cupidatat sint ea commodo duis sunt Lorem cillum ipsum. Elit officia mollit officia commodo exercitation velit qui excepteur do officia tempor id. Lorem amet do adipisicing incididunt veniam sunt. Qui non cupidatat consectetur aliquip consequat. Ipsum ullamco ex Lorem ad culpa nisi duis sit non labore magna. Mollit fugiat do tempor excepteur occaecat. Nostrud mollit esse esse adipisicing elit nulla nostrud officia.
+
+Non ad consequat non tempor velit enim. Exercitation exercitation enim deserunt commodo esse exercitation sit eu deserunt tempor sint velit Lorem proident. Labore cillum consequat sint ullamco occaecat qui in est anim. Commodo voluptate exercitation qui pariatur eu. Nulla culpa consectetur ipsum enim tempor ad. Sunt ullamco qui non pariatur fugiat in sint magna.
+
+Velit enim adipisicing aliqua aliquip dolor officia aliquip. Exercitation et voluptate officia tempor mollit proident labore deserunt laborum ullamco. Anim exercitation ullamco mollit enim ullamco ipsum magna. Aute sunt aliquip officia aliquip tempor laborum qui in nulla. Do eiusmod dolore ad dolor eiusmod in et quis. Proident aliquip veniam sint laboris. Ad occaecat deserunt adipisicing ex laborum aliquip.
+                        
+                    </p>
+                </div> 
+                 <div class="flex-none h-12 bg-purple-500">
+                    <div class="w-full  rounded-md">
+                       button
+                    </div>
+                </div> 
             </div>
-            <div class="w-56 p-3 bg-blue-400">
+            <div class="flex-none w-56 p-3 bg-blue-400">
                 <h2>avatar section</h2>
             </div>
         </section>
 
-       <!-- <section class="flex-none w-56 bg-gray-800 overflow-scroll">
-          <div class="flex justify-between p-3 border-b border-gray-400 text-gray-400">
-              <h2 class="">TailWind Css</h2>
-              <button>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-          </div>
-          <nav class="mt-5 mx-2 text-gray-400 uppercase text-sm mb-10">
-              <div class="flex justify-between">
-                 <h2>General</h2>
-                 <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                    </svg>
-                 </button>
-                </div>
-                <ul class="">
-                    <li class="hover:bg-gray-600 space-x-3 px-2 py-1 text-xs">
-                        <span>#</span>
-                        About
-                    </li>
-                    <li class="hover:bg-gray-600 space-x-3 px-2 py-1 text-xs">
-                        <span>#</span>
-                        About
-                    </li>
-                    <li class="hover:bg-gray-600 space-x-3 px-2 py-1 text-xs">
-                        <span>#</span>
-                        About
-                    </li>
-                    <li class="hover:bg-gray-600 space-x-3 px-2 py-1 text-xs">
-                        <span>#</span>
-                        About
-                    </li>
-                    <li class="hover:bg-gray-600 space-x-3 px-2 py-1 text-xs">
-                        <span>#</span>
-                        About
-                    </li>
-                </ul>
-          </nav>
-          <nav class="mt-5 mx-2 text-gray-400 uppercase text-sm mb-10">
-              <div class="flex justify-between">
-                 <h2>Voice Channel</h2>
-                 <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                    </svg>
-                 </button>
-                </div>
-                <ul class="">
-                    <li class="hover:bg-gray-600 space-x-3 px-2 py-1 text-xs">
-                        <span>#</span>
-                        About
-                    </li>
-                    <li class="hover:bg-gray-600 space-x-3 px-2 py-1 text-xs">
-                        <span>#</span>
-                        About
-                    </li>
-                    <li class="hover:bg-gray-600 space-x-3 px-2 py-1 text-xs">
-                        <span>#</span>
-                        About
-                    </li>
-                    <li class="hover:bg-gray-600 space-x-3 px-2 py-1 text-xs">
-                        <span>#</span>
-                        About
-                    </li>
-                    <li class="hover:bg-gray-600 space-x-3 px-2 py-1 text-xs">
-                        <span>#</span>
-                        About
-                    </li>
-                </ul>
-          </nav>
-       </section>
-       <section class="flex-grow bg-green-500">
-           main message content
-       </section>
-       <section  class="flex-none w-56 bg-pink-700">
-          avatar menu
-       </section> -->
     </main>
     
 </body>
