@@ -517,6 +517,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0.75rem;
 }
 
+.right-1 {
+  right: 0.25rem;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -583,6 +587,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0.5rem;
 }
 
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -617,6 +626,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .inline {
@@ -727,6 +752,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 8rem;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
 .max-h-\[90vh\] {
   max-height: 90vh;
 }
@@ -823,6 +856,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.25rem;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
 .max-w-\[600px\] {
   max-width: 600px;
 }
@@ -886,6 +931,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .items-center {
   align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
 }
 
 .justify-center {
@@ -977,6 +1026,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.-space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(-0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(-0.75rem * var(--tw-space-y-reverse));
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -1033,8 +1094,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 2px;
 }
 
+.border-0 {
+  border-width: 0px;
+}
+
+.border-\[0\.5px\] {
+  border-width: 0.5px;
+}
+
+.border-\[0\.2px\] {
+  border-width: 0.2px;
+}
+
 .border-b {
   border-bottom-width: 1px;
+}
+
+.border-none {
+  border-style: none;
 }
 
 .border-gray-100 {
@@ -1055,6 +1132,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 .bg-gray-400 {
@@ -1191,6 +1273,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(251 207 232 / var(--tw-bg-opacity));
 }
 
+.bg-pink-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(131 24 67 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'https\:\/\/images\.deliveryhero\.io\/image\/fd-mm\/city-title\/city-tile-Yangon\.jpg\?width\=400\&height\=400\'\)\] {
   background-image: url('https://images.deliveryhero.io/image/fd-mm/city-title/city-tile-Yangon.jpg?width=400&height=400');
 }
@@ -1213,6 +1305,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .fill-pandapink {
   fill: #d70f64;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-3 {
@@ -1241,6 +1338,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .py-3 {
@@ -1429,6 +1530,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(215 15 100 / var(--tw-text-opacity));
 }
 
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .placeholder-transparent::-moz-placeholder {
   color: transparent;
 }
@@ -1500,9 +1616,95 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
+.before\:block::before {
+  content: var(--tw-content);
+  display: block;
+}
+
+.before\:h-1::before {
+  content: var(--tw-content);
+  height: 0.25rem;
+}
+
+.before\:w-full::before {
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.before\:w-\[100px\]::before {
+  content: var(--tw-content);
+  width: 100px;
+}
+
+.before\:w-\[100\]::before {
+  content: var(--tw-content);
+  width: 100;
+}
+
+.before\:w-\[1000px\]::before {
+  content: var(--tw-content);
+  width: 1000px;
+}
+
+.before\:w-16::before {
+  content: var(--tw-content);
+  width: 4rem;
+}
+
+.before\:border::before {
+  content: var(--tw-content);
+  border-width: 1px;
+}
+
+.before\:border-2::before {
+  content: var(--tw-content);
+  border-width: 2px;
+}
+
+.before\:border-red-500::before {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+.before\:bg-red-500::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.before\:uppercase::before {
+  content: var(--tw-content);
+  text-transform: uppercase;
+}
+
+.before\:content-\[\'hello\'\]::before {
+  --tw-content: 'hello';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'\'\]::before {
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'d\'\]::before {
+  --tw-content: 'd';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'asd\'\]::before {
+  --tw-content: 'asd';
+  content: var(--tw-content);
+}
+
 .hover\:bg-gray-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.focus\:border-none:focus {
+  border-style: none;
 }
 
 .focus\:outline-none:focus {
