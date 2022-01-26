@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"npx tailwindcss -i ./src/input.css -o ./public/style.css --watch"
-
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.0.2"
+  },
+  "dependencies": {
+    "alpinejs": "^3.8.1"
   }
 }

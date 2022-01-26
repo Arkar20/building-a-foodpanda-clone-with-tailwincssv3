@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Clone</title>
     <link rel="stylesheet" href="../../public/style.css">
+       <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 <body>
-    <main class="flex flex-col text-gray-500 overflow-hidden max-h-screen h-screen">
-        <section class="flex justify-between shadow-lg shadow-gray-900 text-gray-200 bg-gray-800">
-           <div class="w-56 p-3 flex justify-between items-center">
+    <main class="flex flex-col text-gray-500 overflow-hidden max-h-screen max-w-screen h-screen" x-data="{open:false}">
+        <section class="flex justify-between shadow-lg shadow-gray-900 text-gray-200 bg-gray-800" >
+           <div  class="flex min-w-56 w-56 p-3 justify-between items-center">
+               <button class="block lg:hidden" @click="open=!open">MEnu</button>
                 <h2>TailWind Css</h2>
-                <button>
+                <button  >
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
            </div>
-           <div class="flex-grow bg-gray-800"">
+           <div  class="hidden lg:block flex-grow bg-gray-800"">
                 <div class=" p-3 flex items-center justify-between space-x-4">
                     <h2>general discussion</h2>
                     <p class="text-gray-400 text-xs mt-1">socail compution,gaming.research,etc</p>
@@ -60,8 +63,8 @@
         
 
         </section>
-        <section class="flex-grow flex bg-red-700 overflow-y-hidden">
-            <div class="flex-none w-56 py-3  bg-gray-800 flex flex-col">
+        <section  class="flex-grow flex bg-red-700 overflow-y-hidden">
+            <div x-show="open" class="transition-all ease-out  lg:flex flex-none min-w-56 w-56 py-3  bg-gray-800  flex-col">
                 <div class="flex-grow overflow-y-auto mx-2">
             
                 <nav class="mt-5  text-gray-400 uppercase text-sm mb-10">
@@ -538,7 +541,7 @@
                     </div>
                 </div> 
             </div>
-            <div class="flex-none w-56 p-3 bg-gray-800">
+            <div class="hidden  lg:flex flex-none min-w-56 p-3 bg-gray-800">
                 <div class="flex-grow overflow-y-auto mx-2">
                     
                     <div class="mt-5  text-gray-400 uppercase text-sm mb-10">
