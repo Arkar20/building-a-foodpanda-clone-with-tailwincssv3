@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Readex+Pro:wght@200&display=swap"
+        rel="stylesheet">
+    <link href="../../public/style.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+    <main class="flex max-h-screen overflow-hidden h-screen" x-data="{show:false}">
+        <div class="transition-all ease-out flex-none border border-1 border-gray-100 space-y-3 overflow-y-scroll"
+             :class="show?'w-72':'w-0 lg:w-48'"
+        >
+
+
+            <!-- logo comes here -->
+
+            <section>
+                <div class="flex justify-center mt-12 ">
+                    <a class="rounded-full p-3 bg-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-black" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                        </svg>
+                    </a>
+                </div>
+                <h3 class="text-xl font-bold text-center mt-2"> E-shop Center</h3>
+            </section>
+
+            <!-- bottom social icons   -->
+            <div class="items-center">
+                <ul class="space-y-4 cursor-pointer">
+                    <li class="">
+                        <a href=""
+                            class="py-2 mx-2 flex  hover:bg-yellow-400 hover:text-yellow-200 transition ease-in hover:rounded-lg ">
+                            <span class="pl-2 flex-none w-20">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                            </span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href=""
+                            class="py-2 mx-2 flex  hover:bg-yellow-400 hover:text-yellow-200 transition ease-in hover:rounded-lg ">
+                            <span class="pl-2 flex-none w-20">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                            </span>
+                            Size
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+        <!-- start of main part -->
+
+        <div class="flex-grow flex flex-col">
+            <!-- nav part goes here -->
+            <div class="flex-none h-24">
+                <!-- navbar  -->
+                <div class="border py-3 ">
+                    <div class="py-2 px-4 flex justify-between">
+
+                        <!-- search bar goes here  -->
+                        <div class="search-bar flex items-center space-x-3">
+                            <button class="menu" @click="show=!show">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </button>
+                            <div class="search-box">
+                                <input type="text" placeholder="Enter Something" class="rounded-3xl border py-1 px-4" />
+                            </div>
+                        </div>
+                        <!-- profile goes here   -->
+                        <div>
+                            <button class="profile-pic relative">
+                                <div class="rounded-full overflow-hidden ">
+                                    <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" class="w-12 h-12 object-cover"
+                                        alt="" />
+                                </div>
+                                <div class="w-2 h-2 bg-green-400 rounded-full absolute bottom-0 right-1"></div>
+                            </button>
+                        </div>
+                        <!-- end of profile   -->
+                    </div>
+                </div>
+                <!-- navbar  -->
+            </div>
+
+            <!-- content goes here   -->
+            <div class="flex-grow  overflow-scroll lg:px-10 px-4">
+                <div class=" mt-5 flex  justify-between">
+                    <h3>Size Registration</h3>
+                    <h3>Home/Size</h3>
+                </div>
+                <div class="mt-10 flex lg:mx-16 ">
+                    <!-- form section goes here  -->
+                    <form action="" class="lg:p-8 p-2 w-full border rounded-sm">
+                        <div class="space-y-2">
+                            <label for="" class="block">Size</label>
+                            <input type="text" class="bg-gray-200 px-2 py-2 rounded-md w-full" >
+                        </div>
+
+                        <button class="mt-2 px-3 py-1 bg-gray-700 text-white">
+                            Register
+                        </button>
+                    </form>
+                    <!-- form section goes here  -->
+                </div>
+                
+                <!-- search secton goes here   -->
+                <div class="mt-10  lg:mx-16 flex justify-between">
+                    <input type="search" class="w-64 px-4 py-2 bg-gray-50 focus:outline-yellow-300" placeholder="Enter Your search"/>
+                    <button class="p-2 bg-red-400 text-white rounded-md">Reset</button>
+                </div>
+                <!-- search secton goes here   -->
+
+                <div class="mt-2  lg:mx-16 ">
+                    <table class="w-full text-center border rounded-md ">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th scope="col" class="p-3">#</th>
+                                <th scope="col"  class="p-3">Size</th>
+                                <th scope="col" class="p-3">Created At</th>
+                                <th scope="col" class="p-3">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td class="p-3" >Mark</td>
+                                <td class="p-3" >Otto</td>
+                                <td class="p-3">
+                                    <button class="bg-yellow-400 rounded-full p-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td class="p-3" >Mark</td>
+                                <td class="p-3" >Otto</td>
+                                <td class="p-3">
+                                    <button class="bg-yellow-400 rounded-full p-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                           
+                    
+                        </tbody>
+                    </table>
+
+                </div>
+               
+                
+            </div>
+
+            <!-- end of main part -->
+    </main>
+</body>
