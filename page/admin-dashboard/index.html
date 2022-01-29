@@ -13,9 +13,21 @@
 
 </head>
 <body>
-  <main class="flex max-h-screen overflow-hidden h-screen" x-data="{show:false}">
+  <main class="flex max-h-screen overflow-hidden h-screen relative" x-data="{show:false}">
+
+    <button
+      class="absolute top-2 right-2 transition-transform ease-out"
+      :class="show ? 'rotate-180':'opacity-0'"
+      @click="show=false"
+      >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
     <div class="transition-all ease-out min-w-72 flex-none border border-1 border-gray-100 space-y-3 overflow-y-scroll"
-        :class="show?'w-72':'w-0 lg:w-48'"
+        :class="show?'w-screen lg:w-72':'w-0 lg:w-72'"
     >
         
       
@@ -36,18 +48,19 @@
         <div class="items-center">
           <ul class="space-y-4 cursor-pointer" >
             <li class="">
-              <a href="" class="py-2 mx-2 flex  hover:bg-yellow-400 hover:text-yellow-200 transition ease-in hover:rounded-lg ">
+              <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
                 <span class="pl-2 flex-none w-20">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                   </svg>
                 </span>
-                Home
+                Dashboard
               </a>
             </li>
+
             <li class="">
-              <a href="" class="py-2 mx-2 flex  hover:bg-yellow-400 hover:text-yellow-200 transition ease-in hover:rounded-lg ">
+              <a href="/size" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
                 <span class="pl-2 flex-none w-20">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -57,10 +70,179 @@
                 Size
               </a>
             </li>
-            
-            
-            
-           
+
+            <li class="">
+              <a href="product.html" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                <span class="pl-2 flex-none w-20">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </span>
+                Product
+              </a>
+            </li>
+
+            <li class="relative  overflow-hidden ">
+              <input type="checkbox" class="peer cursor-pointer opacity-0 absolute -right-36 h-8 w-96 z-10 ">
+              <div class="  py-2 mx-2 flex peer-checked:bg-yellow-300 hover:text-yellow-50   transition ease-in hover:rounded-lg ">
+                
+                <span class="pl-2 flex-none w-20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
+                </span>
+                <!-- <div class="flex-grow flex justify-between"> -->
+                  <p class="">Utilities</p>                  
+                  
+                <!-- </div> -->
+              </div>
+              <button class="cursor-pointer mr-3 transition-transform ease-out peer-checked:rotate-180  absolute top-2 right-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6  " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
+                </svg>
+              </button>
+              <div class="max-h-0  peer-checked:max-h-96 transition-all ease-in-out">
+                  <ul class="space-y-4 cursor-pointer px-4">
+                    <li class="">
+                      <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                        <span class="pl-2 flex-none w-20">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        </span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                        <span class="pl-2 flex-none w-20">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        </span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                        <span class="pl-2 flex-none w-20">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        </span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                        <span class="pl-2 flex-none w-20">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        </span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                        <span class="pl-2 flex-none w-20">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        </span>
+                        Dashboard
+                      </a>
+                    </li>
+                    </ul>
+              </div>
+            </li>
+            <li class="relative  overflow-hidden ">
+              <input type="checkbox" class="peer cursor-pointer opacity-0 absolute -right-36 h-8 w-96 z-10 ">
+              <div class="  py-2 mx-2 flex peer-checked:bg-yellow-300 hover:text-yellow-50   transition ease-in hover:rounded-lg ">
+                
+                <span class="pl-2 flex-none w-20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
+                </span>
+                <!-- <div class="flex-grow flex justify-between"> -->
+                  <p class="">Utilities</p>                  
+                  
+                <!-- </div> -->
+              </div>
+              <button class="cursor-pointer mr-3 transition-transform ease-out peer-checked:rotate-180  absolute top-2 right-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6  " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
+                </svg>
+              </button>
+              <div class="max-h-0  peer-checked:max-h-96 transition-all ease-in-out">
+                  <ul class="space-y-4 cursor-pointer px-4">
+                    <li class="">
+                      <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                        <span class="pl-2 flex-none w-20">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        </span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                        <span class="pl-2 flex-none w-20">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        </span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                        <span class="pl-2 flex-none w-20">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        </span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                        <span class="pl-2 flex-none w-20">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        </span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="/" class="py-2 mx-2 flex  hover:bg-yellow-300 hover:text-yellow-50 transition ease-in hover:rounded-lg ">
+                        <span class="pl-2 flex-none w-20">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        </span>
+                        Dashboard
+                      </a>
+                    </li>
+                    </ul>
+              </div>
+            </li>
         </ul>
        
         </div>
@@ -83,9 +265,16 @@
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                       </button>
-                      <div class="search-box">
+                      <button type="button" class="cart-icon" >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                      </svg>
+                      </button>
+
+                      <!-- <div class="search-box">
                         <input type="text" placeholder="Enter Something" class="rounded-3xl border py-1 px-4"/>
-                      </div>
+                      </div> -->
                     </div>
                   <!-- profile goes here   -->
                   <div>
@@ -110,7 +299,7 @@
            </div>
            <div class="mt-10 flex justify-center">
           <!-- number card section goes here  -->
-          <div class="grid grid-cols-1 lg:grid-cols-4 lg:space-x-4 space-y-4 ">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
            <!-- single card  -->
             <div class="border rounded-md p-3 px-5 text-sm ">
              <div class="flex justify-between">

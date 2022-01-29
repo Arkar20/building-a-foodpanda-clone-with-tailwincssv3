@@ -530,6 +530,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0.75rem;
 }
 
+.top-2 {
+  top: 0.5rem;
+}
+
+.right-10 {
+  right: 2.5rem;
+}
+
+.-right-10 {
+  right: -2.5rem;
+}
+
+.-right-40 {
+  right: -10rem;
+}
+
+.-right-36 {
+  right: -9rem;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -596,6 +616,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.75rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -634,6 +659,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .block {
@@ -744,6 +773,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 100vh;
 }
 
+.min-h-fit {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+.min-h-0 {
+  min-height: 0px;
+}
+
 .w-4\/5 {
   width: 80%;
 }
@@ -840,6 +879,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100vw;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
 .max-w-\[600px\] {
   max-width: 600px;
 }
@@ -869,6 +916,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: var(--tw-transform);
 }
 
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: var(--tw-transform);
+}
+
 .transform {
   transform: var(--tw-transform);
 }
@@ -883,6 +935,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -931,6 +995,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1198,6 +1270,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(153 21 75 / var(--tw-bg-opacity));
 }
 
+.bg-yellow-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 202 21 / var(--tw-bg-opacity));
+}
+
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 180 180 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 82 82 / var(--tw-bg-opacity));
+}
+
+.bg-red-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(119 29 29 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'https\:\/\/images\.deliveryhero\.io\/image\/fd-mm\/city-title\/city-tile-Yangon\.jpg\?width\=400\&height\=400\'\)\] {
   background-image: url('https://images.deliveryhero.io/image/fd-mm/city-title/city-tile-Yangon.jpg?width=400&height=400');
 }
@@ -1392,6 +1484,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1557,6 +1659,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -1567,6 +1675,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checked\:bg-yellow-300:checked {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 202 21 / var(--tw-bg-opacity));
 }
 
 .hover\:rounded-lg:hover {
@@ -1583,9 +1700,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-yellow-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 202 21 / var(--tw-bg-opacity));
+}
+
+.hover\:px-3:hover {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.hover\:px-2:hover {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .hover\:text-yellow-200:hover {
   --tw-text-opacity: 1;
   color: rgb(252 233 106 / var(--tw-text-opacity));
+}
+
+.hover\:text-yellow-50:hover {
+  --tw-text-opacity: 1;
+  color: rgb(253 253 234 / var(--tw-text-opacity));
 }
 
 .focus\:border-blue-500:focus {
@@ -1602,6 +1739,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-color: #FACA15;
 }
 
+.focus\:outline-yellow-100:focus {
+  outline-color: #FDF6B2;
+}
+
 .focus\:ring-blue-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(63 131 248 / var(--tw-ring-opacity));
@@ -1613,6 +1754,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .peer:checked ~ .peer-checked\:max-h-40 {
   max-height: 10rem;
+}
+
+.peer:checked ~ .peer-checked\:max-h-fit {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+.peer:checked ~ .peer-checked\:max-h-10 {
+  max-height: 2.5rem;
+}
+
+.peer:checked ~ .peer-checked\:max-h-full {
+  max-height: 100%;
+}
+
+.peer:checked ~ .peer-checked\:max-h-96 {
+  max-height: 24rem;
+}
+
+.peer:checked ~ .peer-checked\:min-h-fit {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 .peer:checked ~ .peer-checked\:rotate-180 {
@@ -1628,6 +1793,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .peer:checked ~ .peer-checked\:border-green-300 {
   --tw-border-opacity: 1;
   border-color: rgb(132 225 188 / var(--tw-border-opacity));
+}
+
+.peer:checked ~ .peer-checked\:bg-yellow-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 202 21 / var(--tw-bg-opacity));
 }
 
 .peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:top-2 {
@@ -1810,6 +1980,21 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: 4rem;
   }
 
+  .lg\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  .lg\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .lg\:mx-6 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -1832,6 +2017,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-56 {
     width: 14rem;
+  }
+
+  .lg\:w-72 {
+    width: 18rem;
   }
 
   .lg\:grid-cols-4 {

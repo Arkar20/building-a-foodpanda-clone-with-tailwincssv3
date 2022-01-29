@@ -118,76 +118,64 @@
             <!-- content goes here   -->
             <div class="flex-grow  overflow-scroll lg:px-10 px-4">
                 <div class=" mt-5 flex  justify-between">
-                    <h3>Size Registration</h3>
-                    <h3>Home/Size</h3>
+                    <h3>ShowRoom</h3>
+                    <h3>DashBoard/ShowRoom</h3>
                 </div>
-                <div class="mt-10 flex lg:mx-16 ">
-                    <!-- form section goes here  -->
-                    <form action="" class="lg:p-8 p-2 w-full border rounded-sm">
-                        <div class="space-y-2">
-                            <label for="" class="block">Size</label>
-                            <input type="text" class="bg-gray-200 px-2 py-2 rounded-md w-full">
-                        </div>
-
-                        <button class="mt-2 px-3 py-1 bg-gray-700 text-white">
-                            Register
-                        </button>
-                    </form>
-                    <!-- form section goes here  -->
-                </div>
+               
 
                 <!-- search secton goes here   -->
-                <div class="mt-10  lg:mx-16 flex justify-between">
-                    <input type="search" class="w-64 px-4 py-2 bg-gray-50 focus:outline-yellow-300"
-                        placeholder="Enter Your search" />
+                <div class="mt-10  flex justify-between space-x-2 items-center">
+                    <div class="flex-grow flex  space-x-4 items-center">
+                        <input type="search" class=" px-4 py-2 bg-gray-50 focus:outline-yellow-300"
+                            placeholder="Enter Your search" />
+                        <div class="space-y-2">
+                            <!-- <input type="text" class="bg-gray-200 px-2 py-2 rounded-md w-full"> -->
+                            <select name="" id="" class="bg-gray-200 px-2 py-2 rounded-md w-full focus:outline-yellow-100">
+                                <option value="">Choose One Of The Sizes</option>
+                                <option value="">Choose One Of The Sizes</option>
+                                <option value="">Choose One Of The Sizes</option>
+                                <option value="">Choose One Of The Sizes</option>
+                                <option value="">Choose One Of The Sizes</option>
+                            </select>
+                
+                        </div>
+                        <div class="space-y-2">
+                            <!-- <input type="text" class="bg-gray-200 px-2 py-2 rounded-md w-full"> -->
+                            <select name="" id="" class="bg-gray-200 px-2 py-2 rounded-md w-full focus:outline-yellow-100">
+                                <option value="">Choose One Of The Sizes</option>
+                                <option value="">Choose One Of The Sizes</option>
+                                <option value="">Choose One Of The Sizes</option>
+                                <option value="">Choose One Of The Sizes</option>
+                                <option value="">Choose One Of The Sizes</option>
+                            </select>
+                
+                        </div>
+                    </div>
                     <button class="p-2 bg-red-400 text-white rounded-md">Reset</button>
                 </div>
                 <!-- search secton goes here   -->
 
-                <div class="mt-2  lg:mx-16 ">
-                    <table class="w-full text-center border rounded-md ">
-                        <thead class="bg-gray-200">
-                            <tr>
-                                <th scope="col" class="p-3">#</th>
-                                <th scope="col" class="p-3">Size</th>
-                                <th scope="col" class="p-3">Created At</th>
-                                <th scope="col" class="p-3">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td class="p-3">Mark</td>
-                                <td class="p-3">Otto</td>
-                                <td class="p-3">
-                                    <button class="bg-yellow-400 rounded-full p-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-100"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                        </svg>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td class="p-3">Mark</td>
-                                <td class="p-3">Otto</td>
-                                <td class="p-3">
-                                    <button class="bg-yellow-400 rounded-full p-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-100"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                        </svg>
-                                    </button>
-                                </td>
-                            </tr>
+                <div class="mt-10  grid grid-cols-2 lg:grid-cols-4 gap-4" x-data="{items:[0,1,2,3,4,5,6,7,8,9,10.11]}">
 
-
-                        </tbody>
-                    </table>
-
+                   <!-- start of product card   -->
+                   <template x-for="item in items">
+                        <div class="p-3 border rounded-md">
+                            <h3 class="font-semibold text-4xl">9-12</h3>
+                            <p class="text-sm">Thick|Brown</p>
+                        
+                            <div class="divider my-3 border w-full"></div>
+                            <!-- add to cart btn  -->
+                            <div class="flex space-x-3">
+                                <input type="number" class="bg-gray-50 w-24 p-2 flex-grow focus:outline-yellow-100">
+                                <button class="p-2 bg-yellow-300 text-white">Add</button>
+                            </div>
+                        
+                            <!-- add to cart btn  -->
+                        
+                        </div>
+                   </template> 
+                  
+                   <!-- end of product card   -->
                 </div>
 
 
